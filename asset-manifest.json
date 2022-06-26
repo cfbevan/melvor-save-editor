@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/melvor-save-editor/static/js/main.dbe60d2b.js",
+    "index.html": "/melvor-save-editor/index.html",
+    "main.dbe60d2b.js.map": "/melvor-save-editor/static/js/main.dbe60d2b.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.dbe60d2b.js"
+  ]
+}
