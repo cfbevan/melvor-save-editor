@@ -1,6 +1,9 @@
 import FormControl from "@mui/material/FormControl";
 import Container from "@mui/material/Container";
 import Boolean from "../inputs/boolean";
+import React from "react";
+import { Context } from "../../StateProvider";
+import Button from "@mui/material/Button";
 
 /*
  * Pets is a boolean array
@@ -61,9 +64,18 @@ const petNames = [
 ];
 
 const Pets = ({ path }: { path: string }) => {
+  const state = React.useContext(Context);
+  const toggleAll = (on: 0 | 1) => {
+    petNames.forEach((_, i) => {
+      state!.update(`${path}[${i}]`, on);
+    });
+  };
+
   return (
     <Container sx={{ display: "flex" }}>
       <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
+        <Button onClick={() => toggleAll(1)}>Add All</Button>
+        <Button onClick={() => toggleAll(0)}>Remove All</Button>
         {petNames.map((v, i) => (
           <Boolean key={i} label={v} path={`${path}[${i}]`} />
         ))}

@@ -21,6 +21,26 @@ const numberVars: string[] = [
   "christmas2021Progress",
 ];
 
+const maxValues: number[] = [
+  1,
+  Infinity,
+  9007199254740991,
+  13,
+  Infinity,
+  Infinity,
+  Infinity,
+  Infinity,
+  Infinity,
+  Infinity,
+  Infinity,
+  Infinity,
+  Infinity,
+  3,
+  Infinity,
+  21,
+  Infinity,
+];
+
 const Numbers = ({ path }: { path: string }) => {
   return (
     <Container
